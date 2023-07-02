@@ -51,12 +51,6 @@ To set up and run the Bedrock WordPress project, follow the steps below:
 
 8. In your web server's document root, select the project directory for e.g. `/Sites/Bellaolonje/web`.
 
-9. Copy the contents of the `web` directory to the newly created directory in your web server's document root.
+9. Open your web browser and navigate to the URL of your WordPress.
 
-   ```bash
-   cp -r web/ /path/to/wordpress/installation/
-   ```
-
-10. Open your web browser and navigate to the URL of your WordPress.
-
-11. You're all set!.
+10. You're all set!.
