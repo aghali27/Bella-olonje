@@ -43,40 +43,20 @@ To set up and run the Bedrock WordPress project, follow the steps below:
    cp .env.example .env
    ```
 
-5. Edit the `.env` file and update the database connection details according to your setup.
+5. Copy the database file from DB folder and setup in phpmyadmin.
 
-6. Generate a unique application key.
+6. Edit the `.env` file and update the database connection details according to your setup.
 
-   ```bash
-   php artisan key:generate
-   ```
+7. Update `.env` file, `bud.config.js` file and wp_options table with URL for e.g. http://bella-olonje.local.
 
-7. Create a new database for your WordPress installation.
+8. In your web server's document root, create a new directory for your WordPress installation.
 
-8. Copy the `wp-config-sample.php` file to `wp-config.php` in the project root directory.
+9. Copy the contents of the `web` directory to the newly created directory in your web server's document root.
 
    ```bash
-   cp config/environments/development.php config/environments/production.php
+   cp -r web/ /path/to/wordpress/installation/
    ```
 
-9. Edit `wp-config.php` and update the database connection details with the credentials for your newly created database.
+10. Open your web browser and navigate to the URL of your WordPress.
 
-10. In your web server's document root, create a new directory for your WordPress installation.
-
-11. Copy the contents of the `web` directory to the newly created directory in your web server's document root.
-
-    ```bash
-    cp -r web/ /path/to/wordpress/installation/
-    ```
-
-12. Open your web browser and navigate to the URL of your WordPress installation. Follow the WordPress installation wizard to complete the setup.
-
-13. You're all set! Start developing your WordPress project using Bedrock's structured approach.
-
-## Documentation
-
-For more detailed documentation and usage examples, refer to the official Bedrock documentation: [https://roots.io/bedrock/docs/](https://roots.io/bedrock/docs/)
-
-## License
-
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+11. You're all set!.
