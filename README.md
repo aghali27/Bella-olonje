@@ -49,7 +49,7 @@ To set up and run the Bedrock WordPress project, follow the steps below:
 
 7. Update `.env` file, `bud.config.js` file and wp_options table with URL for e.g. http://bella-olonje.local.
 
-8. In your web server's document root, create a new directory for your WordPress installation.
+8. In your web server's document root, select the project directory for e.g. `/Sites/Bellaolonje/web`.
 
 9. Copy the contents of the `web` directory to the newly created directory in your web server's document root.
 
