@@ -1,0 +1,11 @@
+header{
+    .nav-primary{
+        ul{
+            @apply flex justify-between font-semibold;
+
+            .current-menu-item{
+                @apply text-orange;
+            }
+        }
+    }
+}

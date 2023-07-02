@@ -1,23 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
-@include('partials.page-header')
 
-@if (! have_posts())
-<x-alert type="warning">
-    {!! __('Sorry, no results were found.', 'sage') !!}
-</x-alert>
 
-{!! get_search_form(false) !!}
-@endif
+<?php
+if( have_rows('flexible_template') ):
+    while ( have_rows('flexible_template') ) : the_row(); ?>
 
-@while(have_posts()) @php(the_post())
-@includeFirst(['partials.content-' . get_post_type(), 'partials.content'])
-@endwhile
+<?php if( get_row_layout() == 'home_banner' ): ?>
 
-{!! get_the_posts_navigation() !!}
-@endsection
+<div class="container-fluid bg-black">
+    <?php $image = get_sub_field('background_image'); ?>
+    <img class="h-screen opacity-50 w-full object-contain" src="<?php echo esc_url($image['url']); ?>"
+        alt="<?php echo $image['alt']; ?>">
+</div>
 
-@section('sidebar')
-@include('sections.sidebar')
+<?php endif; ?>
+
+<?php endwhile;
+    endif; ?>
+
 @endsection
