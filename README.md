@@ -22,13 +22,13 @@ To set up and run the Bedrock WordPress project, follow the steps below:
 1. Clone the Bedrock repository to your local machine or download the ZIP file from the GitHub repository.
 
    ```bash
-   git clone https://github.com/roots/bedrock.git
+   git clone https://github.com/aghali27/Bella-olonje.git
    ```
 
 2. Navigate to the project directory.
 
    ```bash
-   cd bedrock
+   cd bella-olonje
    ```
 
 3. Install the project dependencies using Composer.
