@@ -35,7 +35,7 @@
         {
           "name": "White",
           "slug": "white",
-          "color": "#fff"
+          "color": "#fafafa"
         },
         {
           "name": "Slate 50",
@@ -1091,6 +1091,16 @@
           "name": "Rose 900",
           "slug": "rose-900",
           "color": "#881337"
+        },
+        {
+          "name": "Grey",
+          "slug": "grey",
+          "color": "#5c5c5c"
+        },
+        {
+          "name": "Dark_black",
+          "slug": "dark_black",
+          "color": "#252b42"
         }
       ]
     },

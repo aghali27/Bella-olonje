@@ -13,7 +13,7 @@ domReady(async () => {
 import.meta.webpackHot?.accept(console.error);
 
 document.getElementById("open_nav").onclick = function(){
-  document.getElementById("mySidenav").style.width = "50%";
+  document.getElementById("mySidenav").style.width = "80%";
 }
 
 document.getElementById("close_nav").onclick = function(){

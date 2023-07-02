@@ -7,7 +7,7 @@ module.exports = {
         orange: '#FA4A0C',
         grey: '#5C5C5C',
         white: '#FAFAFA',
-        dark: '#252B42',
+        dark_black: '#252B42',
       },
       fontFamily: {
       sans: ['Montserrat'],

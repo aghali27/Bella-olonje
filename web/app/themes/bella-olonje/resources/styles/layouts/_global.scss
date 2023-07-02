@@ -7,7 +7,7 @@ h1, h2{
 }
 
 p{
-    @apply text-2xl max-xl:text-xl max-lg:text-lg py-6;
+    @apply text-2xl max-xl:text-xl py-6 max-sm:leading-normal;
 }
 
 h1{
@@ -15,9 +15,9 @@ h1{
 }
 
 h2{
-    @apply text-5xl max-xl:text-4xl font-semibold leading-tight;
+    @apply text-5xl max-xl:text-4xl max-sm:text-2xl font-semibold leading-tight;
 }
 
 h3, h4{
-    @apply text-4xl max-xl:text-3xl font-bold leading-tight;
+    @apply text-4xl max-xl:text-3xl max-sm:text-4xl max-sm:leading-normal font-bold leading-tight;
 }
