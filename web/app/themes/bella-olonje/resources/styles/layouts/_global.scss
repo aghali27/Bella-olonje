@@ -1,9 +1,9 @@
 body{
-    font-family: 'Montserrat', sans-serif;
+    @apply font-sans;
 }
 
 h1, h2{
-    font-family: 'Poppins', sans-serif;
+    @apply font-serif;
 }
 
 p{
@@ -11,7 +11,7 @@ p{
 }
 
 h1{
-    @apply text-6xl max-xl:text-5xl max-lg:text-4xl max-xl:leading-normal max-lg:leading-relaxed font-bold leading-tight;
+    @apply text-6xl max-xl:text-5xl max-lg:text-4xl max-xl:leading-normal max-lg:leading-relaxed font-bold leading-tight max-sm:font-sans;
 }
 
 h2{

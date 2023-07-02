@@ -10,7 +10,8 @@ module.exports = {
         dark_black: '#252B42',
       },
       fontFamily: {
-      sans: ['Montserrat'],
+      sans: ["'Montserrat'"],
+      serif: ["'Poppins'"],
       } 
     },
   },
