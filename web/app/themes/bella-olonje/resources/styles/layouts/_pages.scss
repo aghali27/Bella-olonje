@@ -1,1 +1,19 @@
 /* HOME */
+
+.banner-text{
+
+@apply w-7/12 left-1/2 top-1/2;
+transform: translate(-50%,-50%);
+
+    p{
+        @apply text-2xl py-6;
+    }
+
+    h1{
+        @apply text-6xl font-bold leading-tight;
+    }
+}
+
+.overlay-image{
+    @apply flex justify-center;
+}

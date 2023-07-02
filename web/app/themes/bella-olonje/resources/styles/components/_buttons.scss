@@ -1,0 +1,8 @@
+.orange-button{
+    @apply bg-orange text-white font-semibold px-14 py-5 rounded-full hover:bg-white hover:text-orange;
+}
+
+.white-button{
+    @apply bg-transparent text-white font-semibold px-14 py-5 rounded-full hover:bg-white hover:text-orange;
+    border: 1px solid white;
+}

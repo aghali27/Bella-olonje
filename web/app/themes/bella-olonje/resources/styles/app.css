@@ -5,3 +5,4 @@
 /* Customs Styles */
 @import './partials/_header.scss';
 @import './layouts/_pages.scss';
+@import './components/_buttons.scss';
