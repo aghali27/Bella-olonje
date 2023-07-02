@@ -1,105 +1,82 @@
-<p align="center">
-  <a href="https://roots.io/bedrock/">
-    <img alt="Bedrock" src="https://cdn.roots.io/app/uploads/logo-bedrock.svg" height="100">
-  </a>
-</p>
-
-<p align="center">
-  <a href="LICENSE.md">
-    <img alt="MIT License" src="https://img.shields.io/github/license/roots/bedrock?color=%23525ddc&style=flat-square" />
-  </a>
-
-  <a href="https://packagist.org/packages/roots/bedrock">
-    <img alt="Packagist" src="https://img.shields.io/packagist/v/roots/bedrock.svg?style=flat-square" />
-  </a>
-
-  <a href="https://github.com/roots/bedrock/actions/workflows/ci.yml">
-    <img alt="Build Status" src="https://img.shields.io/github/workflow/status/roots/bedrock/CI?style=flat-square" />
-  </a>
-
-  <a href="https://twitter.com/rootswp">
-    <img alt="Follow Roots" src="https://img.shields.io/twitter/follow/rootswp.svg?style=flat-square&color=1da1f2" />
-  </a>
-</p>
-
-<p align="center">
-  <strong>A modern WordPress stack</strong>
-</p>
-
-<p align="center">
-  <a href="https://roots.io/"><strong><code>Website</code></strong></a> &nbsp;&nbsp; <a href="https://docs.roots.io/bedrock/master/installation/"><strong><code>Documentation</code></strong></a> &nbsp;&nbsp; <a href="https://github.com/roots/bedrock/releases"><strong><code>Releases</code></strong></a> &nbsp;&nbsp; <a href="https://discourse.roots.io/"><strong><code>Support</code></strong></a>
-</p>
-
-## Sponsors
-
-**Bedrock** is an open source project and completely free to use.
-
-However, the amount of effort needed to maintain and develop new features and products within the Roots ecosystem is not sustainable without proper financial backing. If you have the capability, please consider [sponsoring Roots](https://github.com/sponsors/roots).
-
-<p align="center"><a href="https://github.com/sponsors/roots"><img height="32" src="https://img.shields.io/badge/sponsor%20roots-525ddc?logo=github&logoColor=ffffff&message=" alt="Sponsor Roots"></a></p>
-
-<div align="center">
-<a href="https://k-m.com/"><img src="https://cdn.roots.io/app/uploads/km-digital.svg" alt="KM Digital" width="148" height="111"></a> <a href="https://carrot.com/"><img src="https://cdn.roots.io/app/uploads/carrot.svg" alt="Carrot" width="148" height="111"></a> <a href="https://wordpress.com/"><img src="https://cdn.roots.io/app/uploads/wordpress.svg" alt="WordPress.com" width="148" height="111"></a> <a href="https://pantheon.io/"><img src="https://cdn.roots.io/app/uploads/pantheon.svg" alt="Pantheon" width="148" height="111"></a>
-</div>
+# Bedrock WordPress Project
 
 ## Overview
 
-Bedrock is a modern WordPress stack that helps you get started with the best development tools and project structure.
+This README file provides instructions for setting up and running a WordPress project using Bedrock. Bedrock is a modern WordPress stack that follows best practices and provides a more structured and modular approach to managing WordPress projects.
 
-Much of the philosophy behind Bedrock is inspired by the [Twelve-Factor App](http://12factor.net/) methodology including the [WordPress specific version](https://roots.io/twelve-factor-wordpress/).
+## Prerequisites
 
-## Features
+Before setting up the Bedrock WordPress project, ensure you have the following prerequisites installed on your machine:
 
-- Better folder structure
-- Dependency management with [Composer](https://getcomposer.org)
-- Easy WordPress configuration with environment specific files
-- Environment variables with [Dotenv](https://github.com/vlucas/phpdotenv)
-- Autoloader for mu-plugins (use regular plugins as mu-plugins)
-- Enhanced security (separated web root and secure passwords with [wp-password-bcrypt](https://github.com/roots/wp-password-bcrypt))
+- PHP (version 7.2 or higher)
+- Composer (https://getcomposer.org/)
+- Node.js (version 12 or higher)
+- NPM (comes with Node.js)
+- MySQL or MariaDB database server
+- Git (optional but recommended)
 
-## Requirements
+## Getting Started
 
-- PHP >= 7.4
-- Composer - [Install](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)
+To set up and run the Bedrock WordPress project, follow the steps below:
 
-## Installation
+1. Clone the Bedrock repository to your local machine or download the ZIP file from the GitHub repository.
 
-1. Create a new project:
-   ```sh
-   $ composer create-project roots/bedrock
+   ```bash
+   git clone https://github.com/roots/bedrock.git
    ```
-   By default, this installs the `dist` version of all dependent packages.  To install the `source` versions instead, update `composer.json` as follows:
-   ```json
-    "preferred-install": {
-      "roots/wordpress-no-content": "dist",
-      "*": "source"
-    },
+
+2. Navigate to the project directory.
+
+   ```bash
+   cd bedrock
    ```
-2. Update environment variables in the `.env` file. Wrap values that may contain non-alphanumeric characters with quotes, or they may be incorrectly parsed.
 
-- Database variables
-  - `DB_NAME` - Database name
-  - `DB_USER` - Database user
-  - `DB_PASSWORD` - Database password
-  - `DB_HOST` - Database host
-  - Optionally, you can define `DATABASE_URL` for using a DSN instead of using the variables above (e.g. `mysql://user:password@127.0.0.1:3306/db_name`)
-- `WP_ENV` - Set to environment (`development`, `staging`, `production`)
-- `WP_HOME` - Full URL to WordPress home (https://example.com)
-- `WP_SITEURL` - Full URL to WordPress including subdirectory (https://example.com/wp)
-- `AUTH_KEY`, `SECURE_AUTH_KEY`, `LOGGED_IN_KEY`, `NONCE_KEY`, `AUTH_SALT`, `SECURE_AUTH_SALT`, `LOGGED_IN_SALT`, `NONCE_SALT`
-  - Generate with [wp-cli-dotenv-command](https://github.com/aaemnnosttv/wp-cli-dotenv-command)
-  - Generate with [our WordPress salts generator](https://roots.io/salts.html)
+3. Install the project dependencies using Composer.
 
-3. Add theme(s) in `web/app/themes/` as you would for a normal WordPress site
-4. Set the document root on your webserver to Bedrock's `web` folder: `/path/to/site/web/`
-5. Access WordPress admin at `https://example.com/wp/wp-admin/`
+   ```bash
+   composer install
+   ```
 
-## Community
+4. Configure your environment variables by copying the `.env.example` file to `.env`.
 
-Keep track of development and community news.
+   ```bash
+   cp .env.example .env
+   ```
 
-- Join us on Discord by [sponsoring us on GitHub](https://github.com/sponsors/roots)
-- Participate on the [Roots Discourse](https://discourse.roots.io/)
-- Follow [@rootswp on Twitter](https://twitter.com/rootswp)
-- Read and subscribe to the [Roots Blog](https://roots.io/blog/)
-- Subscribe to the [Roots Newsletter](https://roots.io/subscribe/)
+5. Edit the `.env` file and update the database connection details according to your setup.
+
+6. Generate a unique application key.
+
+   ```bash
+   php artisan key:generate
+   ```
+
+7. Create a new database for your WordPress installation.
+
+8. Copy the `wp-config-sample.php` file to `wp-config.php` in the project root directory.
+
+   ```bash
+   cp config/environments/development.php config/environments/production.php
+   ```
+
+9. Edit `wp-config.php` and update the database connection details with the credentials for your newly created database.
+
+10. In your web server's document root, create a new directory for your WordPress installation.
+
+11. Copy the contents of the `web` directory to the newly created directory in your web server's document root.
+
+    ```bash
+    cp -r web/ /path/to/wordpress/installation/
+    ```
+
+12. Open your web browser and navigate to the URL of your WordPress installation. Follow the WordPress installation wizard to complete the setup.
+
+13. You're all set! Start developing your WordPress project using Bedrock's structured approach.
+
+## Documentation
+
+For more detailed documentation and usage examples, refer to the official Bedrock documentation: [https://roots.io/bedrock/docs/](https://roots.io/bedrock/docs/)
+
+## License
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
