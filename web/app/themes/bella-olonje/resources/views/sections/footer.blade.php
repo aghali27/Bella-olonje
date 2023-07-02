@@ -1,4 +1,4 @@
-<footer class="content-info container mx-auto py-12">
+<footer class="content-info container mx-auto py-12 px-4">
     <div class="grid grid-cols-3 gap-10">
         <div>
             <a class="brand" href="{{ home_url('/') }}">

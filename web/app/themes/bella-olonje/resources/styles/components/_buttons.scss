@@ -1,8 +1,12 @@
 .orange-button{
-    @apply bg-orange text-white font-semibold px-14 py-5 rounded-full hover:bg-white hover:text-orange;
+    @apply bg-orange text-white font-semibold px-14 max-lg:px-10 py-5 max-lg:py-4 rounded-full hover:bg-white hover:text-orange;
 }
 
 .white-button{
-    @apply bg-transparent text-white font-semibold px-14 py-5 rounded-full hover:bg-white hover:text-orange;
+    @apply bg-transparent text-white max-sm:text-orange font-semibold px-14 max-lg:px-10 py-5 max-lg:py-4 rounded-full hover:bg-white hover:text-orange;
     border: 1px solid white;
+
+    @media only screen and (max-width: 640px) {
+        border: 1px solid #FA4A0C;
+    }
 }
