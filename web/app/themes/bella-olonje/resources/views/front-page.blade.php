@@ -15,14 +15,21 @@ if( have_rows('flexible_template') ):
         alt="<?php echo $image['alt']; ?>">
     <div class="absolute top-0 text-white banner-text text-center">
         <?php the_sub_field('text'); ?>
-        <button class="orange-button">Playstore</button>
-        <button class="white-button ml-5">App store</button>
+        <div class="mt-5">
+            <button class="orange-button">Playstore</button>
+            <button class="white-button ml-5">App store</button>
+        </div>
     </div>
     <?php $overlay = get_sub_field('overlay_image'); ?>
 </div>
 <div class="overlay-image">
     <img class="" src="<?php echo esc_url($overlay['url']); ?>" alt="<?php echo $overlay['alt']; ?>">
 </div>
+<div class="divider"></div>
+<?php endif; ?>
+
+<?php if( get_row_layout() == 'heading' ): ?>
+<?php the_sub_field('text'); ?>
 <?php endif; ?>
 
 <?php endwhile;

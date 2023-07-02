@@ -1,0 +1,19 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2{
+    font-family: 'Poppins', sans-serif;
+}
+
+p{
+    @apply text-2xl py-6;
+}
+
+h1{
+    @apply text-6xl font-bold leading-tight;
+}
+
+h2{
+    @apply text-5xl font-semibold leading-tight;
+}
