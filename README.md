@@ -28,7 +28,7 @@ To set up and run the Bedrock WordPress project, follow the steps below:
 2. Navigate to the project directory.
 
    ```bash
-   cd bella-olonje
+   cd Bella Olonje
    ```
 
 3. Install the project dependencies using Composer.
