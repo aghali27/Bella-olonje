@@ -1,11 +1,19 @@
 <header class="banner">
-  <a class="brand" href="{{ home_url('/') }}">
-    {!! $siteName !!}
-  </a>
-
-  @if (has_nav_menu('primary_navigation'))
-    <nav class="nav-primary" aria-label="{{ wp_get_nav_menu_name('primary_navigation') }}">
-      {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav', 'echo' => false]) !!}
-    </nav>
-  @endif
+    <div class="container mx-auto py-4">
+        <div class="flex justify-between items-center">
+            <div>
+                <a class="brand" href="{{ home_url('/') }}">
+                    <img class="w-52 h-auto" src="@asset('images/logo.png')" alt="Bella Olonje Logo">
+                </a>
+            </div>
+            <div>
+                @if (has_nav_menu('primary_navigation'))
+                <nav class="nav-primary" aria-label="{{ wp_get_nav_menu_name('primary_navigation') }}">
+                    {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav', 'echo' => false])
+                    !!}
+                </nav>
+                @endif
+            </div>
+        </div>
+    </div>
 </header>
